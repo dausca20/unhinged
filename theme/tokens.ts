@@ -27,6 +27,9 @@ export const colors = {
   borderDark: '#332638',
   borderLight: '#E8D2C1',
   overlay: 'rgba(14, 11, 16, 0.72)',
+  // Translucent washes (derived from greenFlag / white) for success tints & reveal shimmer
+  successWash: 'rgba(65, 216, 138, 0.12)',
+  shimmer: 'rgba(255, 255, 255, 0.35)',
 } as const;
 
 export const gradients = {
