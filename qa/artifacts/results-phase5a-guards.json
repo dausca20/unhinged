@@ -1,0 +1,44 @@
+[
+  {
+    "id": "7.8",
+    "desc": "pre-onboarding drop shows approved empty state",
+    "pass": true,
+    "detail": "This week’s drop | 10 matches for your delulu. 1 wildcard for the plot. |  | No drop yet | We are still assembling the delulu. Check back soon. |  | DROP |  | LIKE"
+  },
+  {
+    "id": "guard-drop",
+    "desc": "no crash on pre-onboarding drop",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "id": "guard-likes",
+    "desc": "likes route pre-onboarding renders (observe)",
+    "pass": true,
+    "detail": "SEEDED likes visible pre-onboarding"
+  },
+  {
+    "id": "guard-matches",
+    "desc": "messages route pre-onboarding renders (observe)",
+    "pass": true,
+    "detail": "SEEDED conversations visible pre-onboarding"
+  },
+  {
+    "id": "guard-detail",
+    "desc": "match detail with unknown id renders safe state",
+    "pass": true,
+    "detail": "Back | This match isn’t in your current drop. | Back to the drop"
+  },
+  {
+    "id": "guard-chat",
+    "desc": "chat route pre-onboarding (observe: locked or open?)",
+    "pass": true,
+    "detail": "Back\nDevon\nWHY YOU MATCHED\n\nLore Dependency\nSoft Launch Temperature\nChaos Appet"
+  },
+  {
+    "id": "guard-profile",
+    "desc": "profile tab pre-onboarding safe",
+    "pass": true,
+    "detail": "Your profile |  | Edit profile & photos | Edit preferences | Match preferences | Looking for | Genuinely unsure"
+  }
+]

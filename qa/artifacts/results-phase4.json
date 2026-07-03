@@ -1,0 +1,242 @@
+[
+  {
+    "id": "16.2b",
+    "desc": "interactions survive restart (viewed/skipped/saved/liked)",
+    "pass": true,
+    "detail": "{\"viewedKept\":true,\"skippedKept\":true,\"savedKept\":true,\"likedKept\":[\"c30\"]}"
+  },
+  {
+    "id": "16.2c",
+    "desc": "mutuals survive restart",
+    "pass": true,
+    "detail": "mutuals=c02,c08,c30"
+  },
+  {
+    "id": "16.2d",
+    "desc": "delulu profile persisted with visibility",
+    "pass": true,
+    "detail": "type=Romantic Conspiracy Theorist hideDangerZone=true"
+  },
+  {
+    "id": "11.1",
+    "desc": "all 11 matches carry full score+explanation+metadata payload",
+    "pass": true,
+    "detail": "missing="
+  },
+  {
+    "id": "BUG-alreadymatched",
+    "desc": "no already-matched candidate in curated drop (FAIL = bug)",
+    "pass": true,
+    "detail": "in drop: "
+  },
+  {
+    "id": "16.2e",
+    "desc": "Already viewed section persists after restart",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "16.2f",
+    "desc": "Saved chip persists after restart",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "12.1a",
+    "desc": "free tier teaser copy They liked your delulu",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "12.1b",
+    "desc": "free tier hides identities (scrim caption)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "12.4a",
+    "desc": "no banned predatory copy on likes",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "12.4b",
+    "desc": "paywall reached and playful (no banned copy)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "16.5",
+    "desc": "prototype-only purchase disclaimer",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "2.7a",
+    "desc": "paywall dismissible via Not now",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "18.5.1a",
+    "desc": "reached 5 free likes without paywall",
+    "pass": true,
+    "detail": "likesUsed=5"
+  },
+  {
+    "id": "18.5.1b",
+    "desc": "6th like blocked → like_limit paywall",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "BUG-phantomlike",
+    "desc": "match_liked events == actual likes this session (FAIL = phantom analytics)",
+    "pass": false,
+    "detail": "events=5 actualNew=4"
+  },
+  {
+    "id": "2.7c",
+    "desc": "like-limit paywall dismissed cleanly",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "14.4",
+    "desc": "tier switch persists (plus)",
+    "pass": true,
+    "detail": "tier=plus"
+  },
+  {
+    "id": "12.2a",
+    "desc": "paid tier reveals likers (no scrim caption)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "12.2b",
+    "desc": "paid rows show liked-what indicator",
+    "pass": false,
+    "detail": ""
+  },
+  {
+    "id": "13.1a",
+    "desc": "inbox rows for all mutuals",
+    "pass": true,
+    "detail": "rows=3"
+  },
+  {
+    "id": "13.3a",
+    "desc": "context card Why you matched shown",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "13.3b",
+    "desc": "context card collapsible (toggle works)",
+    "pass": true,
+    "detail": "collapse+expand clicked without error"
+  },
+  {
+    "id": "13.4",
+    "desc": "Use opener inserts opener into composer",
+    "pass": false,
+    "detail": "draft=\"Settle a debate for me: is a hot dog a sandwich, or is it a \" opener=\"\""
+  },
+  {
+    "id": "13.2a",
+    "desc": "sent opener appears as local message",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "13.2b",
+    "desc": "second message appends",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "15.2-msg",
+    "desc": "message_sent_mock fired",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "2.6",
+    "desc": "non-matched candidate cannot open chat (Match first lock)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "2.6b",
+    "desc": "unknown chat id renders safe state (no crash)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "14.1",
+    "desc": "profile tab sections present",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "14.3a",
+    "desc": "hideDangerZone=true persisted from onboarding toggle (§6.5 sync)",
+    "pass": true,
+    "detail": "visibility={\"showType\":true,\"showTopTraits\":true,\"hideDangerZone\":true,\"hideMatchExplanationDetails\":false,\"useSuggestedProfileLine\":true}"
+  },
+  {
+    "id": "14.3b",
+    "desc": "public preview respects Hide danger zone",
+    "pass": false,
+    "detail": "dzVisibleInPreview=true"
+  },
+  {
+    "id": "2.7b",
+    "desc": "settings reachable with Back",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "18.4.2b",
+    "desc": "disclaimer in settings",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "15.5a",
+    "desc": "debug panel lists captured events",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "15.5b",
+    "desc": "debug panel shows payloads",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "15.3",
+    "desc": "match events carry full 12-field payload (50 events checked)",
+    "pass": true,
+    "detail": "bad=0"
+  },
+  {
+    "id": "15.4",
+    "desc": "dedicated wildcard events tracked",
+    "pass": true,
+    "detail": "wildcard_impression,wildcard_impression,wildcard_impression,wildcard_expanded,wildcard_impression"
+  },
+  {
+    "id": "14-reset",
+    "desc": "Reset onboarding returns to welcome",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "stability4",
+    "desc": "no page errors in phase 4",
+    "pass": true,
+    "detail": "[]"
+  }
+]

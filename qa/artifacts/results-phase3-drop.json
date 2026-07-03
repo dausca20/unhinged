@@ -1,0 +1,182 @@
+[
+  {
+    "id": "2.3",
+    "desc": "relaunch skips onboarding (tabs shown)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "16.2a",
+    "desc": "AsyncStorage has all five persisted stores",
+    "pass": true,
+    "detail": "unhinged.onboarding,unhinged.auth,unhinged.analytics,unhinged.delulu,unhinged.weeklyDrop"
+  },
+  {
+    "id": "7.1a",
+    "desc": "header 'This week's drop'",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "7.1b",
+    "desc": "subheader 10+1 copy",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "7.3a",
+    "desc": "drop has exactly 10 curated + 1 wildcard",
+    "pass": true,
+    "detail": "curated=10 wildcard=Sofia"
+  },
+  {
+    "id": "11.1",
+    "desc": "all 11 matches have total, 7 components, dims, reasons, explanation, opener",
+    "pass": false,
+    "detail": "missing=c25,c31,c30,c08,c04,c27,c12,c14,c01,c19,c18"
+  },
+  {
+    "id": "9.4",
+    "desc": "wildcard has valid wildcardReason",
+    "pass": true,
+    "detail": "shared_absurd_interest"
+  },
+  {
+    "id": "9.3",
+    "desc": "wildcard is not the top-scoring candidate",
+    "pass": true,
+    "detail": "wc=72.5 topCurated=81.8"
+  },
+  {
+    "id": "7.3b",
+    "desc": "10 curated cards visible",
+    "pass": true,
+    "detail": "count=10"
+  },
+  {
+    "id": "7.3c",
+    "desc": "sections Curated + The wildcard present",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "7.5",
+    "desc": "match labels from approved set only",
+    "pass": true,
+    "detail": "found: Complementary Delulu | Lore-Compatible | The Wildcard"
+  },
+  {
+    "id": "8.1a",
+    "desc": "detail: Why you might match",
+    "pass": false,
+    "detail": ""
+  },
+  {
+    "id": "8.1b",
+    "desc": "detail: Where it could get unhinged",
+    "pass": false,
+    "detail": ""
+  },
+  {
+    "id": "8.1c",
+    "desc": "detail: Compatibility breakdown",
+    "pass": false,
+    "detail": ""
+  },
+  {
+    "id": "8.2",
+    "desc": "explanation matches stored MatchExplanation",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "8.3",
+    "desc": "breakdown qualitative only (no n/100, no raw scores)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "8.3b",
+    "desc": "qualitative strength words shown",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "8.5",
+    "desc": "opener actions Use / Save for later / Absolutely not",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "2.5",
+    "desc": "back returns to drop",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "7.7a",
+    "desc": "viewed card moves to Already viewed",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "7.6-skip",
+    "desc": "skip removes card from curated list",
+    "pass": false,
+    "detail": "visible like buttons=9 (10 - viewed - skipped)"
+  },
+  {
+    "id": "7.6-save",
+    "desc": "save marks card Saved",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "setup-mutual",
+    "desc": "drop contains an inbound-like candidate to test mutual",
+    "pass": false,
+    "detail": "inbound in drop: "
+  },
+  {
+    "id": "7.6-like",
+    "desc": "like persists in interactions",
+    "pass": true,
+    "detail": "liked=c30"
+  },
+  {
+    "id": "like-nonmutual",
+    "desc": "liking non-inbound candidate does not create mutual",
+    "pass": false,
+    "detail": ""
+  },
+  {
+    "id": "9.1",
+    "desc": "wildcard badge present",
+    "pass": false,
+    "detail": ""
+  },
+  {
+    "id": "9.2",
+    "desc": "four wildcard sections present",
+    "pass": false,
+    "detail": ""
+  },
+  {
+    "id": "9.2b",
+    "desc": "wildcard CTA For the plot",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "15.2-dropfb",
+    "desc": "drop feedback control exists and fires",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "stability3",
+    "desc": "no page errors in drop flows",
+    "pass": true,
+    "detail": "[]"
+  }
+]

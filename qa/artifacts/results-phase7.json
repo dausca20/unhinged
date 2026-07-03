@@ -1,0 +1,14 @@
+[
+  {
+    "id": "18.5.2a",
+    "desc": "Unlock (role=button) → paywall_cta_tapped + simulated tier=plus + dismiss",
+    "pass": true,
+    "detail": "ctaFired=true tier=plus"
+  },
+  {
+    "id": "15.2",
+    "desc": "all 30 required events observed across full QA session (missing: wildcard_liked, match_feedback_submitted)",
+    "pass": false,
+    "detail": "seen=28 missing=2"
+  }
+]

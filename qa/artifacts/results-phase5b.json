@@ -1,0 +1,62 @@
+[
+  {
+    "id": "deeplink-render",
+    "desc": "cold deep link to /match/c25 renders content",
+    "pass": true,
+    "detail": "Back |  | MAIN |  | OUT & ABOUT |  | THE BIT | Leo, 31 | Lore-Compatible |  | Brooklyn, NY | Romantic Conspiracy Theorist | I don’t believe "
+  },
+  {
+    "id": "BUG-deeplink-analytics",
+    "desc": "match_explanation_viewed fires on cold deep link (FAIL = events dropped pre-hydration)",
+    "pass": true,
+    "detail": "fired=true"
+  },
+  {
+    "id": "BUG-deeplink-viewed",
+    "desc": "markViewed recorded on cold deep link (FAIL = viewed state dropped)",
+    "pass": true,
+    "detail": "viewed=true"
+  },
+  {
+    "id": "8.4a",
+    "desc": "skip from detail routes back + records skipped",
+    "pass": true,
+    "detail": "back=true skipped=true"
+  },
+  {
+    "id": "8.5b",
+    "desc": "Use opener on detail fires suggested_opener_used",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "8.4b",
+    "desc": "like from detail routes back + records liked",
+    "pass": true,
+    "detail": "liked=true"
+  },
+  {
+    "id": "18.5.2a",
+    "desc": "Unlock fires paywall_cta_tapped + simulated tier upgrade",
+    "pass": false,
+    "detail": "ctaFired=false tier=free"
+  },
+  {
+    "id": "18.2.1",
+    "desc": "tap targets ≥44px on drop screen (FAIL lists offenders; hitSlop not in DOM boxes)",
+    "pass": false,
+    "detail": "[{\"label\":\"Drop\",\"w\":33,\"h\":49},{\"label\":\"Likes\",\"w\":34,\"h\":49}]"
+  },
+  {
+    "id": "18.2.1b",
+    "desc": "chat tap targets ≥44px (informational)",
+    "pass": false,
+    "detail": "[{\"label\":\"Back\",\"w\":47,\"h\":28},{\"label\":\"Collapse match context\",\"w\":308,\"h\":20},{\"label\":\"Use opener\",\"w\":85,\"h\":28}]"
+  },
+  {
+    "id": "18.2.3",
+    "desc": "reduced motion: reveal short-circuits (took 2410ms, full reveal ≈2600ms)",
+    "pass": false,
+    "detail": "ms=2410"
+  }
+]

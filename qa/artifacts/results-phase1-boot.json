@@ -1,0 +1,32 @@
+[
+  {
+    "id": "2.2",
+    "desc": "fresh launch routes to onboarding welcome",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "3.1.1",
+    "desc": "welcome H1 exact copy present",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "3.1.2a",
+    "desc": "primary CTA present",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "3.1.2b",
+    "desc": "secondary account CTA present",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "1.7",
+    "desc": "no console errors on cold start",
+    "pass": true,
+    "detail": "[]"
+  }
+]

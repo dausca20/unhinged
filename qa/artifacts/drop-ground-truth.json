@@ -1,0 +1,42 @@
+{
+  "names": [
+    "Leo",
+    "Dmitri",
+    "Georgia",
+    "Simone",
+    "Theo",
+    "Idris",
+    "Jun",
+    "Ben",
+    "Maya",
+    "Grant"
+  ],
+  "curatedIds": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "inbound": [
+    "c05",
+    "c09",
+    "c18",
+    "c24",
+    "c26",
+    "c30"
+  ],
+  "mutualSeed": [
+    "c02",
+    "c08"
+  ],
+  "wildcard": {
+    "name": "Sofia",
+    "reason": "shared_absurd_interest"
+  }
+}

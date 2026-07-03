@@ -1,0 +1,26 @@
+[
+  {
+    "id": "repro-review",
+    "desc": "reached review",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "P0-crash",
+    "desc": "Woman→Men-only: review completion throws wildcard error",
+    "pass": true,
+    "detail": "Error: weeklyDropService: no eligible candidate available for the wildcard slot"
+  },
+  {
+    "id": "P0-deadend",
+    "desc": "user stuck on review (cannot finish onboarding)",
+    "pass": true,
+    "detail": "stuck=true tabs=false"
+  },
+  {
+    "id": "P0-retry",
+    "desc": "retry also fails (hard dead end)",
+    "pass": true,
+    "detail": ""
+  }
+]

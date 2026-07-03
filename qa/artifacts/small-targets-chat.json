@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Back",
+    "w": 47,
+    "h": 28
+  },
+  {
+    "label": "Collapse match context",
+    "w": 308,
+    "h": 20
+  },
+  {
+    "label": "Use opener",
+    "w": 85,
+    "h": 28
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1.2a",
+    "desc": "app boots with empty env (welcome renders)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "1.2b",
+    "desc": "no fatal errors with empty env",
+    "pass": true,
+    "detail": "[]"
+  },
+  {
+    "id": "15.5-default",
+    "desc": "debug panel entry visible with EMPTY env (spec: only when flag=true; default appears to be true)",
+    "pass": true,
+    "detail": "visible=true (informational)"
+  }
+]

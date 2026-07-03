@@ -1,0 +1,37 @@
+{
+  "seen": [
+    "chat_opened",
+    "compatibility_breakdown_viewed",
+    "delulu_profile_edited",
+    "delulu_profile_generated",
+    "drop_feedback_submitted",
+    "interview_question_answered",
+    "interview_question_viewed",
+    "match_card_expanded",
+    "match_card_impression",
+    "match_explanation_viewed",
+    "match_liked",
+    "match_saved",
+    "match_skipped",
+    "message_sent_mock",
+    "onboarding_completed",
+    "onboarding_started",
+    "onboarding_step_viewed",
+    "paywall_cta_tapped",
+    "paywall_dismissed",
+    "paywall_viewed",
+    "preference_selected",
+    "profile_basics_completed",
+    "suggested_opener_used",
+    "suggested_opener_viewed",
+    "weekly_drop_viewed",
+    "wildcard_expanded",
+    "wildcard_impression",
+    "wildcard_skipped"
+  ],
+  "missing": [
+    "wildcard_liked",
+    "match_feedback_submitted"
+  ],
+  "extra": []
+}

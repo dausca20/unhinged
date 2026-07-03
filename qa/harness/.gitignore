@@ -1,0 +1,8 @@
+browser-profile/
+shots/
+console.jsonl
+results-*.json
+*-text.txt
+*.json
+!../artifacts/*.json
+deeplink-target.json

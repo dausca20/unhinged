@@ -1,0 +1,230 @@
+[
+  {
+    "id": "nav-basics",
+    "desc": "basics screen reached",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "3.2.2a",
+    "desc": "empty submit blocked with specific errors",
+    "pass": true,
+    "detail": "name=true gender=true photos=true prompts=true"
+  },
+  {
+    "id": "3.3.2a",
+    "desc": "3 prompt answer inputs appear",
+    "pass": true,
+    "detail": "count=3"
+  },
+  {
+    "id": "BUG-birthday",
+    "desc": "birthday \"banana\" rejected (FAIL means accepted → silent age=29)",
+    "pass": false,
+    "detail": "advancedToPreferences=true"
+  },
+  {
+    "id": "3.2.3",
+    "desc": "basics values persist across back-nav",
+    "pass": true,
+    "detail": "name=Cate bday=banana"
+  },
+  {
+    "id": "nav-prefs",
+    "desc": "preferences screen reached",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "3.4.1a",
+    "desc": "match style required before continue",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "pref-clamp",
+    "desc": "min-age stepper clamps at max age",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "4.4a",
+    "desc": "progress indicator 1/14 shown",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "4.4b",
+    "desc": "progress advances to 2/14",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "q3",
+    "desc": "Q3 the-ick shown",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "4.6a",
+    "desc": "back returns to Q2 with progress 2/14",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "4.6b",
+    "desc": "forward returns to Q3",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "4.2-slider",
+    "desc": "slider question rendered (4/14)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "slider-found",
+    "desc": "slider track located",
+    "pass": true,
+    "detail": "{\"x\":20,\"y\":222,\"w\":350,\"h\":40}"
+  },
+  {
+    "id": "4.2-reaction",
+    "desc": "profile_reaction renders sample card",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "4.7",
+    "desc": "microcopy appears after answering",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "4.2-multi",
+    "desc": "multi_select rendered (8/14)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "4.2-shorttext",
+    "desc": "short_text rendered (11/14)",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "4.7b",
+    "desc": "short-text microcopy shows",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "4.4c",
+    "desc": "progress shows 14/14 and never exceeds total",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "6.3",
+    "desc": "reveal sequence plays and completes (2516ms)",
+    "pass": true,
+    "detail": "sawReveal=true ms=2516"
+  },
+  {
+    "id": "6.1",
+    "desc": "profile shows type/signature/traits/matched-with/danger/green/profile-line",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "18.4.2",
+    "desc": "disclaimer copy present",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "6.2",
+    "desc": "no public numeric dimension scores",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "6.4a",
+    "desc": "Looks right / Roast me again / Edit what’s public all present",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "5.2-roast",
+    "desc": "deterministic regenerate (before=\"Romantic Conspiracy Theorist\" after=\"Romantic Conspiracy Theorist\")",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "6.5a",
+    "desc": "all five visibility controls present after Edit",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "6.5b",
+    "desc": "five toggle switches rendered",
+    "pass": true,
+    "detail": "count=5"
+  },
+  {
+    "id": "6.5c",
+    "desc": "Hide danger zone switch flips on",
+    "pass": false,
+    "detail": "aria-checked=null"
+  },
+  {
+    "id": "3.5.1a",
+    "desc": "review screen shows One last look",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "3.5.1b",
+    "desc": "review summarizes name",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "BUG-age29",
+    "desc": "review shows age 29 from \"banana\" birthday (FAIL = bug visible)",
+    "pass": true,
+    "detail": "review shows: Cate, 30"
+  },
+  {
+    "id": "3.5.1c",
+    "desc": "Edit(Basics) jumps back with Save changes CTA",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "14.2a",
+    "desc": "basics edit pre-filled from store",
+    "pass": true,
+    "detail": "name=Cate"
+  },
+  {
+    "id": "3.5.1d",
+    "desc": "save returns to review",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "id": "3.5.2",
+    "desc": "completing review routes to weekly drop",
+    "pass": false,
+    "detail": ""
+  },
+  {
+    "id": "stability",
+    "desc": "no page errors during onboarding",
+    "pass": true,
+    "detail": "[]"
+  }
+]
