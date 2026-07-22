@@ -9,7 +9,7 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import (BaseDocTemplate, Frame, PageTemplate, Paragraph,
                                 Spacer, Table, TableStyle, KeepTogether, PageBreak)
 
-OUT = "The_Maids_of_Virginia_Instagram_Plan_August_2026_v2.pdf"
+OUT = "The_Maids_of_Virginia_Instagram_Plan_August_2026_v3.pdf"
 
 # ---------------------------------------------------------------- brand colors
 SAPPHIRE = HexColor("#165EB0")
@@ -118,20 +118,20 @@ story += [chip_t, Spacer(0, 9)]
 CAL = {
     3:  ("ba",   ["POST: B/A Reel", "The Grout Comeback", "Story: poll > B/A"]),
     4:  ("so",   ["Story only", "Review graphic", "Yes/No > Reviews"]),
-    5:  ("tip",  ["POST: Maid Simple #1", "Stainless steel (kept)", "Story: Yes/No > Service"]),
+    5:  ("tip",  ["POST: Maid Simple #1", "Stainless steel", "Story: Yes/No > Service"]),
     6:  ("so",   ["Story only", "Question box: ask a pro", "> Service"]),
     7:  ("fri",  ["POST: Suds and Science #1", "Bleach + vinegar (VO 1)", "Story: Yes/No > Service"]),
     10: ("ba",   ["POST: B/A Reel", "Kitchen, 22-Step captions", "Story: poll > B/A"]),
     11: ("so",   ["Story only", "Review graphic", "Poll > Reviews"]),
-    12: ("tip",  ["POST: Maid Simple #2", "Dust top to bottom", "Story: question > Service"]),
+    12: ("tip",  ["POST: Maid Simple #2", "Clean in sections", "Story: question > Service"]),
     13: ("so",   ["Story only", "Q+A answer round", "> Service"]),
     14: ("fri",  ["POST: Testimonial Reel", "Jeff E., 5 stars", "Story: poll > Reviews"]),
-    17: ("ba",   ["POST: B/A Reel", "Upholstery rescue", "Story: slider > B/A"]),
+    17: ("ba",   ["POST: B/A Reel", "HEPA upholstery rescue", "Story: Yes/No > B/A"]),
     18: ("so",   ["Story only", "Review graphic", "Yes/No > Reviews"]),
-    19: ("tip",  ["POST: Maid Simple #3", "Two-towel rule", "Story: Yes/No > Service"]),
+    19: ("tip",  ["POST: Maid Simple #3", "Microfiber vs. cotton", "Story: poll > Service"]),
     20: ("so",   ["Story only", "Team BTS + guess poll", "> Our Team"]),
-    21: ("fri",  ["POST: Suds and Science #2", "Bleach + glass cleaner", "Story: poll > Service"]),
-    24: ("ba",   ["POST: B/A Reel", "The Oven Finale", "Story: poll > B/A"]),
+    21: ("fri",  ["POST: Suds and Science #2", "Vinegar vs. natural stone", "Story: Yes/No > Service"]),
+    24: ("ba",   ["POST: B/A Reel", "Hard water vs. glass", "Story: poll > B/A"]),
     25: ("so",   ["Story only", "Review graphic", "Slider > Reviews"]),
     26: ("tip",  ["POST: Maid Simple #4", "Dwell time (VO 2)", "Story: question > Service"]),
     27: ("so",   ["Story only", "Spotlight teaser poll", "> Our Team"]),
@@ -242,49 +242,14 @@ def rule_box(title, lines, accent):
     return t
 
 B = "• "
-story.append(Paragraph("Operating Rules for the Month", S_H2))
-story.append(rule_box("Posting structure (weekdays only)", [
-    B + "<b>Monday</b> — Before/After transformation Reel. Under 15 seconds, dirty shot first, hold the after shot a "
-        "full 2 seconds, branded cover applied before posting.",
-    B + "<b>Wednesday</b> — Maid Simple tip Reel. Pro-level tips only: things a professional cleaner knows that most "
-        "homeowners do not.",
-    B + "<b>Friday</b> — rotating slot: Suds and Science (Aug 7) &gt; Testimonial, saved to the Reviews highlight "
-        "(Aug 14) &gt; Suds and Science (Aug 21) &gt; Team Spotlight (Aug 28).",
-    B + "No Saturday or Sunday posts or Stories of any kind. Suggested publish window: 11:30 am–1:00 pm ET.",
-    B + "Every Reel gets a branded cover before posting (Sapphire Blue bar, series name in Golden Yellow) so the grid "
-        "reads as three clean, recognizable series.",
-], SAPPHIRE))
-story.append(Spacer(0, 6))
-story.append(rule_box("Audio and voice rules", [
-    B + "No one speaks on camera, ever, in any language. No talking-head content, no spoken tips.",
-    B + "Default sound: a trending audio chosen the week of posting, or ASMR cleaning sound, always with text overlay.",
-    B + "<b>Exactly two Reels this month use a recorded voiceover:</b> Aug 7 (Suds and Science #1) and Aug 26 "
-        "(Maid Simple #4). Short scripts are included in those post blocks. No other Reel uses voiceover.",
-    B + "Written voice: professional, authoritative, reassuring, efficient.",
-    B + "The mess is never the client's fault — it is the opponent the team beats. No shame language toward "
-        "clients, ever.",
-    B + "Keep every chemical claim accurate and specific. Never exaggerate.",
-], ORANGE))
-story.append(Spacer(0, 6))
-story.append(rule_box("Engagement-first defaults (account is under 100 followers)", [
-    B + "Share every post to Stories the day it publishes with an interactive sticker: poll, slider, Yes/No, or "
-        "question box. Engagement stickers are the priority at this size.",
-    B + "Save every Story to one of four highlights: <b>Reviews, Our Team, Before/After, Service</b>. By September 1 "
-        "all four highlights are fully populated from this rhythm alone.",
-    B + "Every caption ends with a follow, save, share, or comment prompt. No booking CTAs this month — the goal is "
-        "reach and community, not sales.",
-    B + "Reply to every comment and question-sticker answer within 24 hours; at this follower count, each reply "
-        "roughly doubles that person's odds of following.",
-], YELLOW))
-story.append(Spacer(0, 10))
 
 # ---------------------------------------------------------------- story rhythm
 story.append(Paragraph("Weekly Story Rhythm (repeats all month, Monday–Friday)", S_H2))
 rh_head = ["Day", "Story", "Interactive sticker", "Save to highlight"]
 rhythm = [
-    ("Mon", "Share the Before/After Reel", "Poll", "Before/After"),
+    ("Mon", "Share the Before/After Reel", "Poll or Yes/No", "Before/After"),
     ("Tue", "Review graphic (brand template: sapphire background, golden stars, white quote)", "Yes/No, poll, or slider", "Reviews"),
-    ("Wed", "Share the Maid Simple Reel", "Yes/No or question box", "Service"),
+    ("Wed", "Share the Maid Simple Reel", "Yes/No, poll, or question box", "Service"),
     ("Thu", "Engagement day: question box, answer round, or team behind-the-scenes", "Question box or poll", "Service / Our Team"),
     ("Fri", "Share the Friday post", "Poll, slider, or Yes/No", "Matches the slot: Reviews, Service, or Our Team"),
     ("Sat–Sun", "Off. No posts, no Stories.", "—", "—"),
@@ -302,26 +267,6 @@ rh_t.setStyle(TableStyle([
     ("TOPPADDING", (0, 0), (-1, -1), 4), ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
 ]))
 story.append(rh_t)
-story.append(Spacer(0, 10))
-
-# ---------------------------------------------------------------- what changed
-story.append(Paragraph("What Changed From the Prior Version", S_H2))
-changed = [
-    "Educational series name locked as <b>Suds and Science</b> (was “Don't Mix That!”). Aug 7 and Aug 21 keep "
-    "their accurate chemistry topics under the new name.",
-    "Aug 3 concept fully replaced — the “Yohanna vs. hardwater” footage was not used. New bathroom "
-    "transformation (“The Grout Comeback”) with a new hook.",
-    "Aug 26 “vacuum before you mop” tip replaced entirely with a pro-level dwell-time tip. Aug 5 stainless "
-    "steel tip kept as-is.",
-    "All weekend activity removed — posts and Stories run Monday–Friday only — and the Saturday "
-    "neighborhood/service-area Story is gone. Highlights consolidate to Reviews, Our Team, Before/After, Service.",
-    "Spanish spoken-tip option removed under the new audio rules — no one speaks on camera in any language. All Reels "
-    "are music or ASMR plus text overlay except the two marked voiceover Reels (Aug 7, Aug 26).",
-    "Every Story now carries an interactive sticker; Thursdays become dedicated engagement days (Q+A, answer rounds, "
-    "team behind-the-scenes).",
-    "Hashtag block rebuilt around the stated service area plus reach-focused cleaning tags.",
-]
-story.append(rule_box("Seven changes, at a glance", [B + c for c in changed], ORANGE))
 story.append(Spacer(0, 12))
 
 # ---------------------------------------------------------------- post blocks
@@ -382,9 +327,9 @@ story.append(block("ba", "MON AUG 3  |  BEFORE/AFTER REEL — THE GROUT COMEBACK
     (F, "Reel, under 15 seconds. Dirty shot first, hold the after shot a full 2 seconds, branded cover applied "
         "before posting.", S_VAL),
     (A, "ASMR brush-and-foam sound or trending audio, text overlay only. No dialogue.", S_VAL),
-    (H, "“The grout was white the whole time.”", S_HOOK),
+    (H, "“Watch three years of soap scum lose in 12 seconds.”", S_HOOK),
     (C, "Bathroom tile, grout, and tub. 0–2 sec: tight shot of dulled grout lines and a filmed tub edge. "
-        "2–13 sec: fast ASMR montage — grout brush, foam, rinse. Final beat: wide shot of bright tile, held 2 "
+        "2–10 sec: fast ASMR montage — grout brush, foam, rinse. Final beat: wide shot of bright tile, held 2 "
         "full seconds. Real footage, no filter on the after.", S_VAL),
     (CAP, "Soap scum and mineral film build up in every busy bathroom — that is not neglect, that is chemistry doing "
           "what chemistry does. Our team met it with the 22-Step Healthy Touch Deep Cleaning System and won. Watch "
@@ -393,7 +338,6 @@ story.append(block("ba", "MON AUG 3  |  BEFORE/AFTER REEL — THE GROUT COMEBACK
     (FC, TAG_LINE, S_VAL),
     (SA, "Share the Reel with a poll sticker: “Be honest — did you think that grout was beige?” "
          "Yes / 100%. Save to the <b>Before/After</b> highlight.", S_VAL),
-    (N, "Replaces the prior “Yohanna vs. hardwater” concept — that footage was not used.", S_VAL),
 ]))
 
 # ---- TUE AUG 4
@@ -403,7 +347,7 @@ story.append(story_block("TUE AUG 4  |  STORY ONLY — REVIEW GRAPHIC #1",
     "<b>Reviews</b> highlight."))
 
 # ---- WED AUG 5
-story.append(block("tip", "WED AUG 5  |  MAID SIMPLE #1 — STAINLESS STEEL (KEPT AS-IS)", [
+story.append(block("tip", "WED AUG 5  |  MAID SIMPLE #1 — STAINLESS STEEL", [
     (F, "Reel, about 10 seconds, branded cover before posting.", S_VAL),
     (A, "ASMR spray-and-wipe audio with text overlay. No dialogue.", S_VAL),
     (H, "“Maid Simple: streak-free stainless in 10 seconds”", S_HOOK),
@@ -413,8 +357,6 @@ story.append(block("tip", "WED AUG 5  |  MAID SIMPLE #1 — STAINLESS STEEL (KEP
           "for Sunday reset. Follow for a new pro tip every Wednesday.", S_VAL),
     (FC, TAG_LINE, S_VAL),
     (SA, "Share the Reel with a Yes/No sticker: “Did you know this?” Save to the <b>Service</b> highlight.", S_VAL),
-    (N, "Carried over unchanged from the prior plan, except the spoken-Spanish option is dropped under the new audio "
-        "rules.", S_VAL),
 ]))
 
 # ---- THU AUG 6
@@ -450,10 +392,10 @@ story.append(block("ba", "MON AUG 10  |  BEFORE/AFTER REEL — KITCHEN, 22-STEP 
     (F, "Reel, under 15 seconds. Dirty shot first, hold the after shot a full 2 seconds, branded cover before "
         "posting.", S_VAL),
     (A, "Trending audio or ASMR kitchen sounds, text overlay only. No dialogue.", S_VAL),
-    (H, "“Step 14 of 22: appliance exteriors” — rotate numbered step captions through the clip.", S_HOOK),
+    (H, "“We clean every kitchen in 22 steps. Watch.”", S_HOOK),
     (C, "Time-lapse of a full kitchen clean compressed under 15 seconds: greasy stovetop first, then counters, "
-        "sink, appliance fronts, with 22-Step captions rotating on screen. The numbered system is the differentiator "
-        "no competitor can copy. Final wide shot held 2 seconds.", S_VAL),
+        "sink, appliance fronts, with numbered 22-Step captions rotating on screen as the payoff to the hook. The "
+        "numbered system is the differentiator no competitor can copy. Final wide shot held 2 seconds.", S_VAL),
     (CAP, "Grease never quits — neither does the checklist. This kitchen got the full 22-Step Healthy Touch Deep "
           "Cleaning System: every step, every visit, in the same order every time. Save this if you love a system. "
           "Alexandria, Arlington, D.C. and Prince William. Follow along — Mondays are for transformations.", S_VAL),
@@ -468,18 +410,21 @@ story.append(story_block("TUE AUG 11  |  STORY ONLY — REVIEW GRAPHIC #2",
     "cleaning team?” Consistency / Attention to detail. Save to the <b>Reviews</b> highlight."))
 
 # ---- WED AUG 12
-story.append(block("tip", "WED AUG 12  |  MAID SIMPLE #2 — DUST TOP TO BOTTOM", [
+story.append(block("tip", "WED AUG 12  |  MAID SIMPLE #2 — CLEAN IN SECTIONS", [
     (F, "Reel, 10–15 seconds, branded cover before posting.", S_VAL),
-    (A, "Trending audio or ASMR dusting sound, text overlay only. No dialogue.", S_VAL),
-    (H, "“Maid Simple: why we always start at the ceiling”", S_HOOK),
-    (C, "Quick clips in strict order: ceiling fan, shelf, baseboard, vacuum. An arrow overlay drops down the frame "
-        "with each cut to make the gravity logic visible.", S_VAL),
-    (CAP, "Maid Simple, tip #2: dust falls. Start with fans and shelves, finish with floors, and you only clean "
-          "everything once. Save this order for your next whole-room clean. Follow for a new pro tip every "
-          "Wednesday.", S_VAL),
+    (A, "Trending audio or ASMR cleaning sound, text overlay only. No dialogue.", S_VAL),
+    (H, "“Maid Simple: pros don't clean rooms. They clean sections.”", S_HOOK),
+    (C, "Overhead or wide shot of one room with a graphic overlay dividing it into quadrants. Each section lights "
+        "up and gets a checkmark as it is finished completely — top to bottom, left to right — before the next one "
+        "starts. Close with the full room checked off.", S_VAL),
+    (CAP, "Maid Simple, tip #2: divide every room into sections and finish one completely before touching the next. "
+          "Work each section top to bottom, left to right, and you never double back, never miss a corner, and "
+          "never re-clean a spot you already finished. It is the single biggest reason a pro team moves faster than "
+          "a whole afternoon of circling the house. Save this for your next weekend clean. Follow for a new pro tip "
+          "every Wednesday.", S_VAL),
     (FC, TAG_LINE, S_VAL),
-    (SA, "Share the Reel with a question sticker: “What do you always forget to dust?” Screenshot the best "
-         "answers for Thursday's answer round. Save to the <b>Service</b> highlight.", S_VAL),
+    (SA, "Share the Reel with a question sticker: “What spot does every cleaning lap somehow miss?” Screenshot "
+         "the best answers for Thursday's answer round. Save to the <b>Service</b> highlight.", S_VAL),
 ]))
 
 # ---- THU AUG 13
@@ -493,9 +438,11 @@ story.append(block("fri", "FRI AUG 14  |  TESTIMONIAL REEL — JEFF E.", [
     (F, "Reel, 10–15 seconds, branded cover before posting. Saved to the Reviews highlight via the story "
         "share.", S_VAL),
     (A, "Soft trending audio, no dialogue. Five golden stars animate in over real footage of the team working.", S_VAL),
-    (H, "Five stars animating in over footage of the actual team at work.", S_HOOK),
-    (C, "Pair the named quote with footage of the team that cleaned that home: arrival, detail shots, the finished "
-        "rooms. Quote appears line by line in white on sapphire.", S_VAL),
+    (H, "“Like always, they exceed every expectation.” — the review itself is the hook, on screen from second "
+        "one.", S_HOOK),
+    (C, "Open on the quote in white on sapphire with five golden stars animating in beneath it, over footage of the "
+        "team that cleaned that home: arrival, detail shots, the finished rooms. The rest of the quote and the "
+        "reviewer's name land line by line.", S_VAL),
     (CAP, "“Like always, they exceed every expectation.” Thank you, Jeff E. Referred for a reason — and "
           "this is the reason. Follow to meet the teams behind the reviews.", S_VAL),
     (FC, TAG_LINE, S_VAL),
@@ -504,19 +451,22 @@ story.append(block("fri", "FRI AUG 14  |  TESTIMONIAL REEL — JEFF E.", [
 ]))
 
 # ---- MON AUG 17
-story.append(block("ba", "MON AUG 17  |  BEFORE/AFTER REEL — UPHOLSTERY RESCUE", [
+story.append(block("ba", "MON AUG 17  |  BEFORE/AFTER REEL — UPHOLSTERY, HEPA DEEP CLEAN", [
     (F, "Reel, under 15 seconds. Dirty shot first, hold the after shot a full 2 seconds, branded cover before "
         "posting.", S_VAL),
     (A, "ASMR extraction sound (very satisfying) or trending audio, text overlay only. No dialogue.", S_VAL),
-    (H, "“That couch was gray. It is actually purple.”", S_HOOK),
-    (C, "Dull, dusty cushion close-up first, extraction pass in real time, wipe transition to the true color, wide "
-        "after shot held 2 full seconds.", S_VAL),
-    (CAP, "Sofas collect more than crumbs — dust and fibers settle in and mute the color one shade at a time. One "
-          "deep pass and the whole room wakes up. Share this with someone who loves a good reveal. Alexandria, "
-          "Arlington, D.C. and Prince William. Follow for Monday transformations.", S_VAL),
+    (H, "“Some vacuums blow fine dust back into the room. Ours trap it.”", S_HOOK),
+    (C, "How HEPA filtration works, told through a transformation. Dull, dusty cushion close-up first, then a slow "
+        "HEPA-vacuum pass revives the fabric color stripe by stripe; quick macro cutaway of the sealed filter "
+        "canister; wide after shot of the brightened couch held 2 full seconds.", S_VAL),
+    (CAP, "Sofas and carpets hold more fine dust than any hard surface in the house — and a vacuum without sealed "
+          "HEPA filtration can send the finest particles right back into the air. Our teams run HEPA filtration on "
+          "every visit: it traps 99.97% of particles at 0.3 microns, the hardest size to catch. So what leaves the "
+          "couch leaves the room. Share this with the allergy sufferer in your life. Alexandria, Arlington, D.C. "
+          "and Prince William. Follow for Monday transformations.", S_VAL),
     (FC, TAG_LINE, S_VAL),
-    (SA, "Share the Reel with a slider sticker: “How satisfying was this?” Save to the <b>Before/After</b> "
-         "highlight.", S_VAL),
+    (SA, "Share the Reel with a Yes/No sticker: “Did you know a vacuum could put dust back into the air?” "
+         "Save to the <b>Before/After</b> highlight.", S_VAL),
 ]))
 
 # ---- TUE AUG 18
@@ -525,18 +475,20 @@ story.append(story_block("TUE AUG 18  |  STORY ONLY — REVIEW GRAPHIC #3",
     "business?” Save to the <b>Reviews</b> highlight."))
 
 # ---- WED AUG 19
-story.append(block("tip", "WED AUG 19  |  MAID SIMPLE #3 — THE TWO-TOWEL RULE", [
-    (F, "Reel, about 10 seconds, branded cover before posting.", S_VAL),
-    (A, "ASMR glass-squeak sound or trending audio, text overlay only. No dialogue.", S_VAL),
-    (H, "“Maid Simple: the two-towel rule for glass and mirrors”", S_HOOK),
-    (C, "10-second mirror demo: damp microfiber cleans, dry microfiber buffs, camera catches the zero-streak finish "
-        "at an angle in raking light.", S_VAL),
-    (CAP, "Maid Simple, tip #3: one damp microfiber to clean, one dry to buff. That second towel is the whole secret "
-          "— it lifts the residue the first towel loosens, so nothing dries into a streak. Save this for your next "
-          "mirror. Follow for a new pro tip every Wednesday.", S_VAL),
+story.append(block("tip", "WED AUG 19  |  MAID SIMPLE #3 — WHY MICROFIBER LIFTS INSTEAD OF SMEARS", [
+    (F, "Reel, 10–15 seconds, branded cover before posting.", S_VAL),
+    (A, "ASMR wipe sound or trending audio, text overlay only. No dialogue.", S_VAL),
+    (H, "“Maid Simple: one of these cloths just pushes dirt around.”", S_HOOK),
+    (C, "Side-by-side demo on the same greasy counter or mirror: a cotton rag smears an arc, a microfiber cloth "
+        "strips a clean stripe in one pass. Macro cutaway of microfiber's split fibers grabbing and holding the "
+        "soil. Label each side on screen: COTTON / MICROFIBER.", S_VAL),
+    (CAP, "Maid Simple, tip #3: cotton rags and paper towels mostly push oil and dust around. Microfiber is "
+          "different physics — every strand is split into dozens of microscopic edges, and those edges plus "
+          "capillary action grab soil and hold it until the cloth hits the wash. Same wipe, completely different "
+          "result. Save this before your next dusting day. Follow for a new pro tip every Wednesday.", S_VAL),
     (FC, TAG_LINE, S_VAL),
-    (SA, "Share the Reel with a Yes/No sticker: “Did you know the second-towel trick?” Save to the "
-         "<b>Service</b> highlight.", S_VAL),
+    (SA, "Share the Reel with a poll sticker: “What is your daily driver?” Microfiber / Cotton rags / Paper "
+         "towels. Save to the <b>Service</b> highlight.", S_VAL),
 ]))
 
 # ---- THU AUG 20
@@ -546,37 +498,43 @@ story.append(story_block("THU AUG 20  |  STORY ONLY — TEAM BEHIND-THE-SCENES",
     "the real number in a second frame. Save to the <b>Our Team</b> highlight."))
 
 # ---- FRI AUG 21
-story.append(block("fri", "FRI AUG 21  |  SUDS AND SCIENCE #2 — BLEACH + GLASS CLEANER", [
-    (F, "Reel or text-forward post, 15–20 seconds. Same visual system as part 1 (bottles, red X) so the series "
+story.append(block("fri", "FRI AUG 21  |  SUDS AND SCIENCE #2 — VINEGAR AND NATURAL STONE", [
+    (F, "Reel or text-forward post, 15–20 seconds. Same visual system as part 1 (bottle, red X) so the series "
         "is instantly recognizable in the grid. Branded cover before posting.", S_VAL),
     (A, "Trending audio or soft music with text overlay. No dialogue, no voiceover — the month's two voiceover slots "
         "are Aug 7 and Aug 26.", S_VAL),
-    (H, "“Bleach and glass cleaner do not belong in the same bucket.”", S_HOOK),
-    (C, "Part 2 of the series: bottle labeled GLASS CLEANER slides in beside BLEACH, red X lands, key line appears: "
-        "“ammonia + bleach = chloramine fumes.”", S_VAL),
-    (CAP, "Suds and Science, part 2. Many glass cleaners contain ammonia, and ammonia plus bleach creates chloramine "
-          "fumes that can leave you dizzy, short of breath, and sick. One product at a time, with the fan on. It is "
-          "one reason professional teams carry separate, labeled supplies for every job. Save it, share it. Follow "
-          "for more Suds and Science.", S_VAL),
+    (H, "“Vinegar cleans a lot of things. It eats marble.”", S_HOOK),
+    (C, "Part 2 of the series: bottle labeled VINEGAR slides toward a marble countertop, red X lands between them, "
+        "key line appears: “acid + calcium carbonate = etching.” Close-up insert of a dull etch ring that "
+        "looks like a water mark but never wipes away.", S_VAL),
+    (CAP, "Suds and Science, part 2. Vinegar is an acid, and marble, limestone, and travertine are calcium "
+          "carbonate — the same mineral as chalk. Acid dissolves it on contact, leaving dull etch marks that look "
+          "like water rings but are actually damage to the stone itself. No product fixes an etch; only refinishing "
+          "does. It is why our teams carry pH-neutral, stone-safe cleaners for every natural surface. Save this if "
+          "you have stone counters, and share it with someone who cleans everything with vinegar. Follow for more "
+          "Suds and Science.", S_VAL),
     (FC, TAG_LINE, S_VAL),
-    (SA, "Share the Reel with a poll sticker: “Which combination surprised you more?” Bleach + vinegar / "
-         "Bleach + glass cleaner. Save to the <b>Service</b> highlight.", S_VAL),
+    (SA, "Share the Reel with a Yes/No sticker: “Did you know vinegar can permanently mark natural stone?” "
+         "Save to the <b>Service</b> highlight.", S_VAL),
 ]))
 
 # ---- MON AUG 24
-story.append(block("ba", "MON AUG 24  |  BEFORE/AFTER REEL — THE OVEN FINALE", [
+story.append(block("ba", "MON AUG 24  |  BEFORE/AFTER REEL — HARD WATER VS. SHOWER GLASS", [
     (F, "Reel, under 15 seconds. Dirty shot first, hold the after shot a full 2 seconds, branded cover before "
         "posting.", S_VAL),
-    (A, "ASMR scrub-and-foam sound or trending audio, text overlay only. No dialogue.", S_VAL),
-    (H, "“The inside of the oven counts too.”", S_HOOK),
-    (C, "Baked-on oven interior first, scrub montage, then the door swings open on the gleaming after as the final "
-        "beat — held 2 full seconds. Optional quick fridge-shelf cutaway mid-montage.", S_VAL),
-    (CAP, "Baked-on grease thinks time is on its side. It is not. Ovens and fridges are the deep-clean finale for a "
-          "reason — is this the best reveal of the month? You tell us in the comments. Alexandria, Arlington, D.C. "
-          "and Prince William. Follow for Monday transformations.", S_VAL),
+    (A, "ASMR scrub-and-squeegee sound or trending audio, text overlay only. No dialogue.", S_VAL),
+    (H, "“The film on your shower glass isn't soap. It's rock.”", S_HOOK),
+    (C, "The science of hard water, told through a transformation. Clouded shower glass and a crusted faucet first, "
+        "descale-and-scrub montage, one long squeegee pull as the reveal, then crystal-clear glass and gleaming "
+        "chrome held 2 full seconds.", S_VAL),
+    (CAP, "That cloudy film on shower glass is dissolved rock: calcium and magnesium that stay behind every time a "
+          "water droplet dries. Add soap and it becomes scum; add time and it hardens like stone. Our team "
+          "dissolves it with the right chemistry, not brute force, then squeegees it to clear. Hold the last frame "
+          "— that is bare glass. Alexandria, Arlington, D.C. and Prince William. Follow for Monday "
+          "transformations.", S_VAL),
     (FC, TAG_LINE, S_VAL),
-    (SA, "Share the Reel with a poll sticker: “How often does the oven get a deep clean at your place?” "
-         "Monthly / Holidays only / No comment. Save to the <b>Before/After</b> highlight.", S_VAL),
+    (SA, "Share the Reel with a poll sticker: “Where does hard water hit hardest at your place?” Shower "
+         "glass / Faucets / Kettle / Everywhere. Save to the <b>Before/After</b> highlight.", S_VAL),
 ]))
 
 # ---- TUE AUG 25
@@ -588,12 +546,13 @@ story.append(story_block("TUE AUG 25  |  STORY ONLY — REVIEW GRAPHIC #4",
 story.append(block("tip", "WED AUG 26  |  MAID SIMPLE #4 — DWELL TIME  (VOICEOVER REEL 2 OF 2)", [
     (F, "Reel, 12–15 seconds with an on-screen countdown timer, branded cover before posting.", S_VAL),
     (A, "<b>Voiceover Reel 2 of 2</b> (calm, professional narration recorded off-camera) over soft music. Script: "
-        "“Here is a pro secret: stop wiping so soon. Spray, then give it five minutes — that is dwell time, and "
-        "it is printed right on the label. Let the chemistry do the scrubbing. Maid Simple, from The Maids of "
-        "Virginia.”", S_VAL),
-    (H, "“Maid Simple: stop wiping too soon”", S_HOOK),
-    (C, "Spray a shower wall, timer overlay ticks forward in fast-motion while the product visibly works, then one "
-        "effortless wipe reveals the clean stripe. Side text: “the label tells you the minutes.”", S_VAL),
+        "“Here is a pro secret: stop scrubbing. Spray, walk away, and give it five minutes — that is dwell "
+        "time, and it is printed right on the label. Let the chemistry do the scrubbing for you. Maid Simple, from "
+        "The Maids of Virginia.”", S_VAL),
+    (H, "“Stop scrubbing your shower. Pros spray it and walk away.”", S_HOOK),
+    (C, "Spray a shower wall, then the team literally walks out of frame; timer overlay ticks forward in "
+        "fast-motion while the product visibly works, then one effortless wipe reveals the clean stripe. Side text: "
+        "“the label tells you the minutes.”", S_VAL),
     (CAP, "Maid Simple, tip #4: spray, then walk away. Every cleaner has a dwell time — the minutes it needs to sit "
           "wet and break soil down before you wipe. It is printed right on the label, and disinfectants do not "
           "disinfect without it. Spray the shower, go pour the coffee, come back to an easier job. Less scrubbing, "
@@ -601,8 +560,6 @@ story.append(block("tip", "WED AUG 26  |  MAID SIMPLE #4 — DWELL TIME  (VOICEO
     (FC, TAG_LINE, S_VAL),
     (SA, "Share the Reel with a question sticker: “What should Maid Simple cover next?” Answers seed the "
          "September lineup. Save to the <b>Service</b> highlight.", S_VAL),
-    (N, "Replaces the prior “vacuum before you mop” tip, which was below the pro-level bar for this "
-        "series.", S_VAL),
 ]))
 
 # ---- THU AUG 27
@@ -650,15 +607,15 @@ story.append(Paragraph(
     "specific, never exaggerated. Ready-to-film topics:", S_BODY))
 story.append(Spacer(0, 5))
 story.append(rule_box("Next up in the series", [
-    B + "<b>Why vinegar should never touch natural stone.</b> Acetic acid dissolves the calcium carbonate in "
-        "marble, limestone, and travertine — those dull spots are etching, not stains.",
-    B + "<b>How HEPA filtration works.</b> HEPA filters capture 99.97% of particles at 0.3 microns — the hardest "
-        "size to trap; larger and smaller particles are caught at even higher rates — so fine dust and allergens "
-        "stay in the vacuum instead of going back into the air. A natural brand story for our HEPA-equipped teams.",
-    B + "<b>Why microfiber lifts instead of smears.</b> Split fibers create thousands of tiny edges and capillary "
-        "channels that pull in oil and dust, where cotton and paper mostly push them around.",
-    B + "<b>The science of hard water.</b> Dissolved calcium and magnesium bond with soap into scum and stay behind "
-        "as mineral film when water evaporates — why bathrooms fog and faucets crust in the same spots.",
+    B + "<b>Why bleach and glass cleaner never share a bucket.</b> Many glass cleaners contain ammonia, and "
+        "ammonia plus bleach creates chloramine fumes that cause dizziness, shortness of breath, and nausea — the "
+        "natural part 3 after August's bleach + vinegar post.",
+    B + "<b>The baking soda + vinegar myth.</b> Mixed together they mostly neutralize each other — the fizz is "
+        "carbon dioxide leaving, and what remains is basically salt water. Great volcano, weak cleaner.",
+    B + "<b>Why dish soap cuts grease.</b> Surfactant molecules have a water-loving head and an oil-loving tail; "
+        "they surround grease droplets and float them away instead of spreading them.",
+    B + "<b>Why hot water cleans faster.</b> Heat speeds the chemistry: soils dissolve sooner, surfactants work "
+        "harder, and grease softens once it warms past its melt point.",
 ], SAPPHIRE))
 story.append(Spacer(0, 6))
 story.append(Paragraph(
